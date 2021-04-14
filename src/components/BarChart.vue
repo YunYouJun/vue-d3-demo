@@ -4,9 +4,11 @@
 </template>
 
 <script>
+import { defineComponent } from "vue";
 import axios from "axios";
 import * as d3 from "d3";
-export default {
+
+export default defineComponent({
   data() {
     return {
       color: "steelblue",
@@ -37,6 +39,7 @@ export default {
         })
         .sort((a, b) => d3.descending(a.value, b.value));
     },
+
     /**
      * 绘制直方图
      */
@@ -115,5 +118,5 @@ export default {
       svg.append("g").call(yAxis);
     },
   },
-};
+});
 </script>

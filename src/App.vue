@@ -2,13 +2,14 @@
   <BarChart />
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import BarChart from "./components/BarChart.vue";
 
-export default {
+export default defineComponent({
   name: "App",
   components: {
     BarChart,
   },
-};
+});
 </script>
