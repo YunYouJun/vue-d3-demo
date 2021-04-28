@@ -1,10 +1,10 @@
 <template>
-  <h2>这里是一个表单</h2>
+  <h2>咱是表单</h2>
   <el-form ref="form" :model="form" label-width="80px">
-    <el-form-item label="name">
+    <el-form-item label="字母">
       <el-input v-model="form.name"></el-input>
     </el-form-item>
-    <el-form-item label="value">
+    <el-form-item label="频率">
       <el-input-number
         v-model="form.value"
         :precision="2"
@@ -13,7 +13,7 @@
       />
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="onSubmit">submit</el-button>
+      <el-button type="primary" @click="onSubmit">提交</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -33,7 +33,6 @@ export default defineComponent({
 
   methods: {
     onSubmit() {
-      console.log("submit!");
       this.$store.commit("form/addItem", this.form);
       console.log(this.$store.state.form.chartData);
     },

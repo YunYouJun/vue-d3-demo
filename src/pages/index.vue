@@ -1,15 +1,4 @@
 <template>
-  <BarChart />
+  <h2>咱是首页</h2>
+  <p>没什么可说的，开整！</p>
 </template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import BarChart from "../components/BarChart.vue";
-
-export default defineComponent({
-  name: "index",
-  components: {
-    BarChart,
-  },
-});
-</script>
